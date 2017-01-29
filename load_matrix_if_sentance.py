@@ -5,7 +5,7 @@ import commands,os,os.path,sys,string, glob
 print "Taking choosen value"
 
 if len(sys.argv) < 2:
-	print "******************** ERREUR **************************"
+	print "******************** ERROR **************************"
 	print "arguments:"
 	print "give a full path to files"
 	print "..."
@@ -19,16 +19,17 @@ pathToFiles = pathToFiles + typeOfFile
 files = glob.glob(pathToFiles)
 for input_file in files:
 	print "input file : "+ input_file
-	with open(input_file, 'r') as f:
+	with open(input_file, 'r') as f:		
 		first_line = f.readline()
-		howmuchRinfile = first_line
-		print "elements of R " + first_line
-		content = f.readlines()
-		content = [x.strip() for x in content]
-		print content
-		if content == "R":
-			print "wartosc:" 
-			print content
+		print "swinia " + first_line
+		for i in first_line:
+			print "swinkaa " + i
+			while (f.readline() == "R"):
+				content = f.readline()
+				content = f.readline()
+				print "swiania"
+#content = [x.strip() for x in content]
+#print content
 sys.exit(0)
 
 
