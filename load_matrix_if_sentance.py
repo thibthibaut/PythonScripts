@@ -24,7 +24,7 @@ for input_file in files:
 		print "swinia " + first_line
 		for i in first_line:
 			print "swinkaa " + i
-			while (f.readline() == "R"):
+			while (f.readline().rstrip() == "R"):
 				content = f.readline()
 				content = f.readline()
 				print "swiania"
